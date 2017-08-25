@@ -58,18 +58,19 @@ print(sum_2d_array(arr2)) # => 3
 # then pass `null` into `cb`.
 #
 # Examples:
-#
+
+def min_value_callback(array, cb):
+
 # // Math.abs is a built in function to get the absolute value of anumber
-# var array1 = [-2, -7, 0, 8];
+array1 = [-2, -7, 0, 8];
 # minValueCallback(array1, Math.abs); // => 7
 
 # // example cb
-# function double(n) {
-#   return n * 2
-# }
-# var array2 = [12, 9, 20, 13, 14];
-# minValueCallback(array2, double); // => 18
+def double(n):
+    return n * 2
 
+array2 = [12, 9, 20, 13, 14];
+print(min_value_callback(array2, double)) # => 18
 
 # Write a function mySelect(arr, cb) that accepts an array and a callback.
 # It should pass the callback every element, its corresponding index, and the array
@@ -77,17 +78,17 @@ print(sum_2d_array(arr2)) # => 3
 # returns a truthy value.
 #
 # Examples:
-#
-# function isUpper(str) {
-#   return str.toUpperCase() === str;
-# }
-#
-# function isEven(n) {
-#   return n % 2 === 0;
-# }
-#
-# var result1 = mySelect(['BOOTCAMP', 'prep', 'iS', 'COOL'], isUpper);
-# result1; // => [ 'BOOTCAMP', 'COOL' ]
-#
-# var result2 = mySelect([1, 2, 4, 7, 8], isEven);
-# result2; // => [ 2, 4, 8 ]
+
+def my_select(arr, cb):
+
+def is_upper(str):
+    return str.upper() === str;
+
+def is_even(n):
+    return n % 2 === 0;
+
+result1 = my_select(['BOOTCAMP', 'prep', 'iS', 'COOL'], is_upper);
+result1 # => [ 'BOOTCAMP', 'COOL' ]
+
+result2 = my_select([1, 2, 4, 7, 8], is_even);
+result2 # => [ 2, 4, 8 ]
