@@ -1,11 +1,3 @@
-# Write a function `arrayBuilder(count)` that takes in a count object and returns
-# an array filled with the appropriate numbers of elements. The order of
-# the elements in the array does not matter, but repeated elements should be
-# grouped.
-#
-# Examples:
-#
-
 def array_builder(count):
     new_array = []
     for k, v in count.iteritems():
@@ -15,11 +7,6 @@ def array_builder(count):
 
 # print(array_builder({'cats': 2, 'dogs': 1})) # //=> ['cats', 'cats', 'dogs']
 # print(array_builder({})) # //=> []
-
-# Write a function longestWord(sentence) that retuns the longest word of a sentence.
-# If there are ties, the function should return the later word.
-#
-# Examples:
 
 def longest_word(sentence):
     longest = ''
@@ -43,11 +30,6 @@ def least_common_multiple(num1, num2):
 # print(least_common_multiple(2, 3)) #=> 6
 # print(least_common_multiple(6, 10)) #=> 30
 # print(least_common_multiple(24, 26)) #=> 312
-
-# Write a function sillyCipher(sentence, cipher) that takes in an string (sentence)
-# and an object (cipher). Return a string where every character is replaced with its
-# cooresponding value in the cipher. If the character doesn't exist in the
-# cipher, use a dot (.)
 
 def silly_cipher(sentence, cipher):
     ciphered = ''
