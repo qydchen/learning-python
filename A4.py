@@ -41,3 +41,31 @@ def silly_cipher(sentence, cipher):
 # print(silly_cipher("apple", { "a" : "c", "p" : "x"})) # //=> 'cxx..'
 # print(silly_cipher("bootcamp prep?", { "o" : "e", "p" : "q" , "?" : "!"})) # //=> '.ee....q.q..q!'
 # print(silly_cipher("twmce", { "m" : "n", "t" : "d", "w" : "a"})) # //=> 'dan..''
+
+# Write a function `hipsterfy(sentence)` that takes takes a string containing
+# several words as input. Remove the last vowel from each word. 'y' is not a vowel.
+#
+# Examples:
+def hipped(word):
+    reverse = word[::-1]
+    for idx, char in enumerate(reverse):
+        if char in "aeiou":
+            return (reverse[:idx] + reverse[idx + 1:])[::-1]
+
+
+def hipsterfy(sentence):
+    words = sentence.split(" ")
+    hipsterfied = []
+    for word in words:
+        hipsterfied.append(hipped(word))
+    return " ".join(hipsterfied)
+
+
+# print(hipped("anaconda"))
+# print(hipped("cheeseburger"))
+
+# print(hipsterfy("proper")) # => "propr"
+# print(hipsterfy("proper tonic panther")) # => "propr tonc panthr"
+# print(hipsterfy("towel flicker banana")) # => "towl flickr banan"
+# print(hipsterfy("runner anaconda")) # => "runnr anacond"
+# print(hipsterfy("turtle cheeseburger fries")) # => "turtl cheeseburgr fris"
