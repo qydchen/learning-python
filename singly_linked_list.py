@@ -63,7 +63,6 @@ class LinkedList:
             else:
                 current_node = current_node.next
 
-
 ll = LinkedList()
 ll.push("a")
 ll.print_ll()
