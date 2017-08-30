@@ -63,8 +63,22 @@ class LinkedList:
             else:
                 current_node = current_node.next
 
-ll = LinkedList()
-ll.push("a")
-ll.print_ll()
-ll.push("b")
+
+    def insert(self, val, idx):
+        current_idx = 0
+        current_node = self.head
+        newNode = Node(val)
+        if idx == 0:
+            self.head = newNode
+            self.head.next = current_node
+            return
+        while current_idx < idx - 1:
+            current_node = current_node.next
+            current_idx += 1
+        newNode.next = current_node.next
+        current_node.next = newNode
+
+ll = LinkedList("a", "b")
+ll.insert("c", 0)
+ll.insert("d", 0)
 ll.print_ll()
