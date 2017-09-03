@@ -63,7 +63,6 @@ class LinkedList:
             else:
                 current_node = current_node.next
 
-
     def insert(self, val, idx):
         current_idx = 0
         current_node = self.head
