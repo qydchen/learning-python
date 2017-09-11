@@ -8,11 +8,18 @@ def my_map(arr, cb):
 def multiply(num1, num2):
     return num1 * num2;
 
-print(my_map([2, 4, 6, 6], multiply)); # => [ 0, 4, 12, 18 ]
+# print(my_map([2, 4, 6, 6], multiply)) # => [ 0, 4, 12, 18 ]
 
-# def is_palindrome(sentence):
-#
-#
+def is_palindrome(sentence):
+    i = 0
+    while i < len(sentence)/2:
+        if sentence[i] != sentence[-i - 1]:
+            return False
+        i += 1
+    return True
+
+# print(is_palindrome('racecar'))
+
 # def passing_students(students):
 #
 #
